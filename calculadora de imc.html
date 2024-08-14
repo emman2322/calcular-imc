@@ -1,0 +1,48 @@
+<meta charset = "utf-8">
+<h1>programa calcular imc</h1>
+
+<script>
+	function saltarlinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+function imprimir(frase){
+	document.write(frase);
+	saltarlinea();
+}
+function calcularimc(peso,altura){
+	return(peso/(altura*altura));
+
+}
+nombre=prompt("informe su nombre");
+peso=prompt(nombre +",informe su peso");
+altura=prompt(nombre +",informe su altura");
+
+imcCalculado=calcularimc(peso,altura);
+imprimir(nombre + ",su imc calculado es:"+imcCalculado);
+
+if (imcCalculado<18.5){
+	imprimir("estas flaco mijo, hace falta comer");
+}
+
+if (imcCalculado>=18.5){
+	if(imcCalculado<25){
+		imprimir("estas dentro de lo normal, cuidate y recuerda tomar aguita");
+
+	}
+}
+
+if(imcCalculado=25){
+	imprimir("usted tiene sobre peso, aguas!!");
+}
+
+if(imcCalculado=25){
+	if(imcCalculado<29.9){
+		imprimir("usted tiene preobesidad ya bajele a los tacos");
+	}
+}
+if (imcCalculado>=30){
+	imprimir("usted esta bien panson, tiene obesidad!! ya cuidese");
+}
+</script>
